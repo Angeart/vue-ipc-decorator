@@ -1,6 +1,7 @@
 # Vue Ipc Decorator
 Write ipc message with class style method is possible
 
+[![CircleCI](https://circleci.com/gh/Angeart/sapphire-cpp/tree/master.svg?style=shield)](https://circleci.com/gh/Angeart/sapphire-cpp/tree/master)
 # Install
 ```bash
 yarn add -D vue-ipc-decorator
