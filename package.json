@@ -1,6 +1,17 @@
 {
+  "name": "vue-ipc-decorator",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "angeart",
+    "url": "https://github.com/angeart"
+  },
+  "files": ["lib"],
   "scripts": {
-    "build": "tsc -p ./src/tsconfig.json && rollup -c"
+    "build": "tsc -p ./src/tsconfig.json && rollup -c",
+    "test": "jest",
+    "prepublishOnly": "yarn run build"
   },
   "dependencies": {
     "electron": "^6.0.0",
