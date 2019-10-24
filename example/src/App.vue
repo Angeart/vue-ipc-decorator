@@ -1,20 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <button @click="testCallFromRenderer()">call test</button>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
+import { IpcRendererSend, IpcRendererReceive } from '../../src/index';
 
 @Component({
   components: {
     HelloWorld,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  @IpcRendererSend()
+  testEvent() {
+    return 'hoge!!';
+  }
+  testCallFromRenderer() {
+    console.log('triggered');
+    (async () => {console.log(await this.testEvent())})();
+  }
+  @IpcRendererReceive()
+  testReceive(data: any) {
+    console.log('receive from main process',data)
+    return 'hoge'
+  }
+}
 </script>
 
 <style>
