@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:4.8.2
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn run build
