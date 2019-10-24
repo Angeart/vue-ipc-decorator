@@ -64,7 +64,7 @@ export default class GreetComponent extends Vue {
     private async greet() {
         // decorated function will be asynchronous function
         let response = await this.greetFromRenderer();
-            console.log('got response!!', response)
+        console.log('got response!!', response)
     }
 }
 ```
