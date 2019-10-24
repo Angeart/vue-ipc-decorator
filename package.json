@@ -1,12 +1,27 @@
 {
   "name": "vue-ipc-decorator",
+  "description": "method decorators of Ipc for Vue + Electron",
   "version": "0.1.0",
-  "main": "lib/index.js",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.js",
+  "keywords": [
+    "vue",
+    "typescript",
+    "decorator"
+  ],
   "license": "MIT",
   "author": {
     "name": "angeart",
     "url": "https://github.com/angeart"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angeart/vue-ipc-decorator"
+  },
+  "bugs": {
+    "url": "https://github.com/Angeart/vue-ipc-decorator/issues"
+  },
+  "homepage": "https://github.com/Angeart/vue-ipc-decorator#readme",
   "files": ["lib"],
   "scripts": {
     "build": "tsc -p ./src/tsconfig.json && rollup -c",
