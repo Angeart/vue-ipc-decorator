@@ -23,7 +23,9 @@
     "url": "https://github.com/Angeart/vue-ipc-decorator/issues"
   },
   "homepage": "https://github.com/Angeart/vue-ipc-decorator#readme",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "tsc -p ./src/tsconfig.json && rollup -c",
     "test": "jest",
@@ -40,6 +42,7 @@
     "@types/jest": "^24.0.19",
     "jest": "^24.9.0",
     "rollup": "^1.25.1",
+    "rollup-plugin-strip": "^1.2.2",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
   }
